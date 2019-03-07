@@ -1,0 +1,293 @@
+$color-a: #585858;
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Nanum Gothic','Malgun Gothic','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  color: $color-a;
+  text-decoration: none;
+}
+
+$header-nav-height: 61px;
+$header-border-color: #e7e7e7;
+header.main-header {
+  height: $header-nav-height;
+  border-bottom: 1px solid $header-border-color;
+
+  // header에서 사용하는 모든 리스트에 해당
+  ul.header-menu-list {
+    // header의 모든 리스트 아이템들은
+    //   왼쪽 기준 수평 정렬
+    //   $header-nav-height(61px)의 줄 간격을 가짐
+    //     -> 수직 중앙 정렬에 사용
+    li {
+      float: left;
+      line-height: $header-nav-height;
+      img {
+        // 이미지들은 각각의 height값이 전부 다르기 때문에 각 이미지들의
+        // 수직 중앙 부분을 기준으로 정렬되도록 vertical-align설정
+        vertical-align: middle;
+      }
+    }
+  }
+
+  // header의 좌측 메뉴
+  //   메인로고, 다방프로 로고를 포함
+  ul.left {
+    height: 100%;
+    float: left;
+
+    li > a {
+      padding: 0 15px;
+    }
+  }
+
+  // header의 우측 메뉴
+  //   .room-list, .auth-list 2개의 리스트를 자식으로 가짐
+  .right {
+    height: 100%;
+    float: right;
+
+    .header-menu-list {
+      float: left;
+      li > a {
+        padding: 0 15px;
+      }
+      // 방 검색, 관심목록, 방 등록 리스트
+      &.room-list {
+        // 체인선택자 (두 선택자가 모두 있는 요소를 가리킴)
+        //   .header-menu-list.room-list
+        font-size: 14px;
+        margin-right: 12px;
+      }
+      // 회원가입/로그인 리스트
+      &.auth-list {
+        //   .header-menu-list.auth-list
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+$search-container-height: 678px;
+$search-bottom-height: 110px;
+$search-bottom-child-elements-height: 50px;
+.search-container {
+  height: $search-container-height;
+  background-position: center center;
+  position: relative;
+}
+
+
+.input-container {
+  $input-width: 434px;
+  $button-width: 100px;
+  width: $input-width + $button-width;
+  // margin: 0 auto;
+  // (110 - 50) / 2
+  margin: ($search-bottom-height - $search-bottom-child-elements-height) / 2 auto 0;
+  // font-size: 0;
+
+  > * {
+    box-sizing: border-box;;
+    float: left;
+    height: 50px;
+    border: 0;
+  }
+  input {
+    width:$input-width;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 14px;
+    line-height: 50px;
+    text-indent: 20px;
+  }
+
+  button {
+    width: $button-width;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: #3b8de0;
+    font-size: 15px;
+    color: #fff;
+  }
+}
+
+.theme-header {
+  width: 960px;
+  margin: 71px auto 30px;
+  text-align: center;
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+}
+
+
+$theme-container-width: 960px;
+
+.theme-container {
+  width:$theme-container-width;
+  margin: 0 auto;
+  .theme-list {
+    background-size: cover;
+    // li.theme:nth-of-type(1) {
+    //   background: url("../images/pet.jpg") no-repeat;
+    //   background-size: cover;
+    // }
+    // li.theme:nth-of-type(1):hover {
+    //   transition: transform .3s ease-in-out;
+    // }
+    //
+    // li.theme:nth-of-type(2) {
+    //   background: url("../images/guarantee.jpg") no-repeat;
+    //   background-size: cover;
+    // }
+    // li.theme:nth-of-type(3) {
+    //   background: url("../images/pano.jpg") no-repeat;
+    //   background-size: cover;
+    // }
+    // li.theme:nth-of-type(4) {
+    //   background: url("../images/parking.jpg") no-repeat;
+    //   background-size: cover;
+    // }
+    // li.theme:nth-of-type(5) {
+    //   background: url("../images/direct.jpg") no-repeat;
+    //   background-size: cover;
+    // }
+    // li.theme:nth-of-type(6) {
+    //   background: url("../images/officetel.jpg") no-repeat;
+    //   background-size: cover;
+    // }
+
+    li.theme {
+      float:left;
+      width: 32%;
+      padding-top: 32%;
+      position: relative;
+      margin-bottom: 30px;
+      margin-right: 2%;
+      box-sizing: border-box;
+
+      &.theme:nth-of-type(3n){
+        margin-right:0;
+      }
+
+      > .theme-content {
+        position:  absolute;
+      	top: 0;
+      	left: 0;
+      	bottom: 0;
+      	right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition-duration: .5s;
+        // background-
+        // transform: scale(1.3);
+
+      }
+      > .theme-content:hover > .mask {
+        background-color: rgba(0, 0, 0, 0.2);
+        transition-duration: .5s;
+      }
+    }
+  }
+}
+
+.pet {
+  background: url("../images/pet.jpg") no-repeat;
+}
+
+.guarantee {
+  background: url("../images/guarantee.jpg") no-repeat;
+}
+
+.pano {
+  background: url("../images/pano.jpg") no-repeat;
+}
+.parking {
+  background: url("../images/parking.jpg") no-repeat;
+}
+.direct {
+  background: url("../images/direct.jpg") no-repeat;
+}
+.officetel {
+  background: url("../images/officetel.jpg") no-repeat;
+}
+
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+  opacity: .4;
+  position: absolute;
+
+}
+
+.typo {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+
+  span {
+    font-size: 13px;
+  }
+}
+
+
+.search-bar-bg {
+  position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $search-bottom-height;
+    background-color: rgba(0,0,0,0.6);
+}
+
+// .search-bar {
+//     width: 434px;
+//     height: 50px;
+//     padding: 0 20px;
+//     border: none;
+//     border-radius: 3px 0 0 3px;
+//     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+//     font-size: 14px;
+//     line-height: 50px;
+//     margin: 30px auto;
+//     float:left;
+// }
+//
+// .search-bar-button {
+//   width: 100px;
+//   height: 50px;
+//   border: 0;
+//   border-radius: 0 5px 5px 0;
+//   font-size: 15px;
+//   margin-top: 30px;
+//   background-color: #3b8de0;
+//   color: #fff;
+//   float: left;
+// }

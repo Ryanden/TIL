@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <!-- 모든 요소들이 세로 61px기준으로 수직 중앙 정렬되도록 변경 -->
+    <!-- 헤더부분의 좌측 메뉴 -->
+    <ul class="header-menu-list left">
+      <li>
+        <a href="">
+          <img src="images/logo.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="images/main_link_icon_pro.png" alt="">
+        </a>
+      </li>
+    </ul>
+    <!-- 헤더 부분의 우측 메뉴 -->
+    <div class="right">
+      <ul class="header-menu-list room-list">
+        <li><a href="">방 검색</a></li>
+        <li><a href="">관심 목록</a></li>
+        <li><a href="">방 등록</a></li>
+      </ul>
+      <ul class="header-menu-list auth-list">
+        <li><a href="">공인중개사 회원가입</a></li>
+        <li><a href="">회원가입 및 로그인</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="wrap">
+    <div class="search-container"
+       style="background-image: url('images/main-photo.png');">
+       <div class="search-bar-bg">
+        <!-- <div class="seacrh-bottom">
+          <input type="text" class="search-bar">
+          <button class="search-bar-button">방 검색</button>
+        </div> -->
+          <div class="input-container">
+            <input type="text" placeholder="관심지역 또는 매물 지역을 검색해 보세요">
+            <button>방 검색</button>
+          </div>
+
+       </div>
+    </div>
+
+    <div class="theme-wrapper">
+
+      <div class="theme-header">
+        <h2>테마 검색</h2>
+        <p>다방의 다양한 검색조건으로 방을 찾아보세요.</p>
+      </div>
+      <div class="theme-container">
+        <ul class="theme-list">
+          <li class="theme">
+            <!-- .theme는 height width를 같게 맞추기위한 padding 으로 가득 차 있으므로
+            .there가 차지하는 영역에 실제로 들어갈 내용으ㄹ 위한 div 새로 생성
+            position: absolute 속성을 사용해 부모 위치를 기준으로 정렬 -->
+            <div class="theme-content pet">
+              <div class="mask">
+
+              </div>
+              <div class="typo">
+                <h3 class="title">반려동물</h3>
+                <div class="line"></div>
+                <span class="theme-subtitle">반려동물과 함께 살 수 있는 방</span><br>
+                <span>찾아보기</span>
+              </div>
+
+            </div>
+
+          </li>
+          <li class="theme">
+            <div class="theme-content guarantee">
+              <div class="mask"></div>
+              <div class="typo">
+                <h3 class="title">저보증금</h3>
+                <div class="line"></div>
+                <span class="theme-subtitle">보증금 300만원 이하인 방</span><br>
+                <span>찾아보기</span>
+              </div>
+
+            </div>
+          </li>
+          <li class="theme">
+            <div class="theme-content pano">
+              <div class="mask"></div>
+              <div class="typo">
+                <h3 class="title">360도 매물</h3>
+                <div class="line"></div>
+                <span class="theme-subtitle">3D 이미지로 더 자세히 볼 수 있는 방</span><br>
+                <span>찾아보기</span>
+              </div>
+
+            </div>
+          </li>
+          <li class="theme">
+            <div class="theme-content parking">
+              <div class="mask"></div>
+              <div class="typo">
+                <h3 class="title">주차가능</h3>
+                <div class="line"></div>
+                <span class="theme-subtitle">주차공간이 확보된 방</span><br>
+                <span>찾아보기</span>
+              </div>
+
+            </div>
+          </li>
+          <li class="theme">
+            <div class="theme-content direct">
+              <div class="mask"></div>
+              <div class="typo">
+                <h3 class="title">직거래매물</h3>
+                <div class="line"></div>
+                <span class="theme-subtitle">중개수수료 없는 직거래 매물</span><br>
+                <span>찾아보기</span>
+              </div>
+
+            </div>
+          </li>
+          <li class="theme">
+            <div class="theme-content officetel">
+              <div class="mask"></div>
+              <div class="typo">
+                <h3 class="title">오피스텔</h3>
+                <div class="line"></div>
+                <span class="theme-subtitle">깨끗하고 편리한 주거용 오피스텔</span><br>
+                <span>찾아보기</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sitemap">
+      h3.sitemap-
+    </div>
+
+
+
+
+  </div>
+
+  <footer>
+    <!-- <div class='box'>
+      <div class='content'>Aspect ratio of 1:1</div>
+    </div> -->
+
+    <!-- <div class="theme vertical-table">
+      <div class="theme-content">
+        <div class="outer">
+          <div class="inner">
+            <div class="typo">
+              <h3 class="title">반려동물</h3>
+              <div class="line"></div>
+              <div class="description">반려동물과 함께 ^^</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+
+  </footer>
+</body>
+</html>
