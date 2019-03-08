@@ -1,4 +1,4 @@
-## Django RESTFARMEWORK
+## Django RestFrameWork
 
 ### Method(Get, Post, Patch, Delete)
 
